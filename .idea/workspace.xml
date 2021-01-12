@@ -1,7 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:heroku" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="1117c32f-77bf-4a85-81ac-29bad9f94bc0" name="Default Changelist" comment="" />
+    <list default="true" id="1117c32f-77bf-4a85-81ac-29bad9f94bc0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_22_181601_create_auto_mobile_engineers_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/customer/customerLending.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/customer/customerLending.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -9,9 +38,7 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution>
-      <executable />
-    </execution>
+    <execution />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -110,16 +137,19 @@
   <component name="ProjectId" id="1U5xqh6Vzgi6ntFhjfPi9OW0A3D" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Controllers" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\GariSarao.com\app\Http\Controllers" />
       <recent name="D:\xampp\htdocs\GariSharao.com" />
       <recent name="F:\xampp\htdocs\laravelMulAuth\resources\views\admin" />
       <recent name="F:\xampp\htdocs\laravelMulAuth\app\Http\Controllers\Admin" />
@@ -131,18 +161,7 @@
       <method v="2" />
     </configuration>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -157,16 +176,45 @@
       <workItem from="1574691483936" duration="4910000" />
       <workItem from="1574696963463" duration="809000" />
       <workItem from="1585118529851" duration="2768000" />
+      <workItem from="1586699849812" duration="17000" />
+      <workItem from="1608098061066" duration="696000" />
+      <workItem from="1608125266452" duration="149000" />
+      <workItem from="1608125419520" duration="1514000" />
+      <workItem from="1609159666664" duration="3668000" />
+      <workItem from="1609219057323" duration="209000" />
+      <workItem from="1609523994458" duration="492000" />
+      <workItem from="1609594654114" duration="1794000" />
+      <workItem from="1609681485371" duration="3112000" />
+      <workItem from="1609857106607" duration="1048000" />
+      <workItem from="1610376106093" duration="1750000" />
+      <workItem from="1610379155253" duration="842000" />
+      <workItem from="1610380030835" duration="3462000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="542" y="216" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585118670391">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="413" y="130" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1610379801202">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="542" y="216" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1585118670391" />
+    <state x="413" y="130" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.768@0.0.1366.768" timestamp="1610379801202" />
+    <state x="463" y="138" key="FileChooserDialogImpl" timestamp="1610380811642">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="463" y="138" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1610380811642" />
   </component>
 </project>

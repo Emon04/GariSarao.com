@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAutoMobileEngineersTable extends Migration
+class CreateAutomobileWorkShopsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,17 @@ class CreateAutoMobileEngineersTable extends Migration
      */
     public function up()
     {
-        Schema::create('auto_mobile_engineers', function (Blueprint $table) {
+        Schema::create('automobile_work_shops', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
+            $table->text('about');
+            $table->string('address');
+            $table->string('service_areas');
             $table->string('email')->unique();
+            $table->string('phone');
+            $table->string('status');
+            $table->string('image');
+            $table->string('trade_license');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
@@ -31,6 +38,6 @@ class CreateAutoMobileEngineersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('auto_mobile_engineers');
+        Schema::dropIfExists('automobile_work_shops');
     }
 }

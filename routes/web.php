@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('customer.customerLending');
 });
 
 Auth::routes();
@@ -75,9 +75,9 @@ Route::get('/epartsForCustomer','EcommerceController@ecommerce')->name('epartsFo
 Route::get('/homeCheck', function () {
     return view('customer.homeCheck');
 });
-Route::get('/customerLending', function () {
-    return view('customer.customerLending');
-});
+//Route::get('/customerLending', function () {
+//    return view('customer.customerLending');
+//});
 Route::get('/lendingCheck', function () {
     return view('customer.lendingCheck');
 });
