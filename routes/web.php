@@ -1,88 +1,82 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
-Route::get('/', function () {
-    return view('customer.customerLending');
-});
+use App\Http\Controllers\BrandController;
+
+Route::get('/','GariSaraoController@index')->name('/');
+
+
+
+Route::get('/category/{id}/{name}','GariSaraoController@category')->name('category');
+Route::get('/product-details/{id}','GariSaraoController@productDetails')->name('product-details');
+
+Route::post('/cart','CartController@addCart')->name('add-cart');
+Route::get('/cart','CartController@viewCart');
+Route::get('/cart/delete/{id}','CartController@deleteCart')->name('delete-cart');
+Route::post('/cart/update','CartController@updateCart')->name('edit-cart');
+
+Route::get('/checkout','CheckoutController@index')->name('checkout');
+Route::post('/checkout/sign-up','CheckoutController@signUp')->name('checkout-sign-up');
+
+Route::post('/checkout/customer-login','CheckoutController@customerLoginCheck')->name('customer-login');
+Route::post('/checkout/customer-logout','CheckoutController@customerLogout')->name('customer-logout');
+Route::get('/checkout/new-customer-login','CheckoutController@newCustomerLogin')->name('new-customer-login');
+
+
+
+Route::get('/checkout/shipping','CheckoutController@shipping');
+Route::post('/checkout/shipping','CheckoutController@saveShippingInfo')->name('new-shipping');
+Route::get('/checkout/payment','CheckoutController@paymentForm');
+Route::post('/checkout/order','CheckoutController@newOrder')->name('new-order');
+Route::get('/checkout/payment/confirm','CheckoutController@confirmPayment');
+
+Route::get('/checkout/payment/stripe', 'CheckoutController@stripe');
+Route::post('/stripe', 'CheckoutController@stripePost')->name('stripe.post');
 
 Auth::routes();
+Route::get('/home', 'HomeController@index')->name('home');
 
-//Route::get('/home', 'HomeController@index')->name('home');
-//Route::get('admin/home','AdminController@index');
-//Route::get('admin','SuperAdmin\LoginController@showLoginForm')->name('admin.login');
-//Route::post('admin','SuperAdmin\LoginController@login');
-//Route::POST  ( 'admin-password/email','SuperAdmin\ForgotPasswordController@sendResetLinkEmail')->name('admin.password.email');
-//
-//Route::GET('admin-password/reset','SuperAdmin\ForgotPasswordController@showLinkRequestForm')->name('admin.password.request');
-//Route::POST('admin-password/reset','SuperAdmin\ResetPasswordController@reset');
-//Route::GET('admin-password/reset/{token}','SuperAdmin\ResetPasswordController@showResetForm')->name('admin.password.reset');
-//Route::get('/home','HomeController@home');
+//start category
 
-Route::group(['prefix'=>'customer'],function(){
+Route::get('/category/add', 'CategoryController@addCategory')->name('add-category');
+Route::post('/category/new','CategoryController@newCategory')->name('new-category');
+Route::get('/category/manage','CategoryController@manageCategory')->name('manage-category');
+Route::get('/category/published/{id}','CategoryController@publishedCategory')->name('published-category');
+Route::get('/category/unpublished/{id}','CategoryController@unpublishedCategory')->name('unpublished-category');
+Route::post('/category/update','CategoryController@updateCategory')->name('update-category');
+Route::get('/category/delete/{id}','CategoryController@deleteCategory')->name('delete-category');
 
-//    Route::get('/','EmployerController@index')->name('employer.home');
-    Route::get('/login', 'customer\LoginController@showLoginForm')->name('customer.login');
-    Route::post('/login', 'customer\LoginController@login')->name('customer.login.submit');
-    Route::get('/register', 'customer\RegisterController@showRegForm')->name('customer.register');
+//end category
 
-    Route::post('/register', 'customer\RegisterController@register')->name('customer.register.submit');
 
-    Route::get('logout', 'customer\LoginController@logout')->name('customer.logout');
-});
-Route::get('/customerHome','CustomerController@showCustomerHome')->name('customer.home');
-Route::group(['prefix'=>'autoMobileEngineer'],function(){
+//start brand
 
-//    Route::get('/','EmployerController@index')->name('employer.home');
-    Route::get('/login', 'autoMobileEngineer\LoginController@showLoginForm')->name('autoMobileEngineer.login');
-    Route::post('/login', 'autoMobileEngineer\LoginController@login')->name('autoMobileEngineer.login.submit');
-    Route::get('/register', 'autoMobileEngineer\RegisterController@showRegForm')->name('autoMobileEngineer.register');
+Route::get('/brand/add','BrandController@addBrand')->name('add-brand');
+Route::post('/brand/new','BrandController@newBrand')->name('new-brand');
+Route::get('/brand/view','BrandController@viewBrand')->name('view-brand');
+Route::get('/brand/published/{id}','BrandController@publishedBrand')->name('published-brand');
+Route::get('/brand/unpublished/{id}','BrandController@unpublishedBrand')->name('unpublished-brand');
+Route::post('/brand/update','BrandController@updateBrand')->name('edit-brand');
+Route::get('/brand/delete/{id}','BrandController@deleteBrand')->name('delete-brand');
 
-    Route::post('/register', 'autoMobileEngineer\RegisterController@register')->name('autoMobileEngineer.register.submit');
+//end brand
 
-    Route::get('logout', 'autoMobileEngineer\LoginController@logout')->name('autoMobileEngineer.logout');
-});
-Route::get('/autoMobileEngineerHome','AutoMobileEngineerController@showAutoMobileEngineer')->name('autoMobileEngineer.home');
+//Product Route Start Section
 
-Route::group(['prefix'=>'superAdmin'],function(){
+Route::get('/product/add','ProductController@addProduct')->name('add-product');
+Route::post('/product/new','ProductController@newProduct')->name('new-product');
+Route::get('/product/view','ProductController@viewProduct')->name('view-product');
+Route::post('/product/update/{id}','ProductController@updateProduct')->name('update-product');
+Route::get('/product/delete/{id}','ProductController@deleteProduct')->name('delete-product');
 
-//    Route::get('/','EmployerController@index')->name('employer.home');
-    Route::get('/login', 'superAdmin\LoginController@showLoginForm')->name('superAdmin.login');
-    Route::post('/login', 'superAdmin\LoginController@login')->name('superAdmin.login.submit');
-    Route::get('/register', 'superAdmin\RegisterController@showRegForm')->name('superAdmin.register');
 
-    Route::post('/register', 'superAdmin\RegisterController@register')->name('superAdmin.register.submit');
+//Product Route End Section
 
-    Route::get('logout', 'superAdmin\LoginController@logout')->name('superAdmin.logout');
-});
-Route::get('/superAdminHome','SuperAdminController@showSuperAdmin')->name('superAdmin.home');
+Route::get('/order/manage-order','OrderController@manageOrderInfo')->name('manage-order');
+Route::get('/order/view-order-detail/{id}','OrderController@viewOrderDetail')->name('view-order-detail');
+Route::get('/order/view-order-invoice/{id}','OrderController@viewOrderInvoice')->name('view-order-invoice');
+Route::get('/order/download-order-invoice/{id}','OrderController@downloadOrderInvoice')->name('download-order-invoice');
 
-//Route::get('/getServiceHome', function () {
-//    return view('customer.getServiceHome')->name('getService.home');
-//});
-Route::get('/getServiceHome','ServiceController@getServiceHome')->name('getService.home');
-Route::get('/epartsForCustomer','EcommerceController@ecommerce')->name('epartsForCustomer.home');
-
-Route::get('/homeCheck', function () {
-    return view('customer.homeCheck');
-});
-//Route::get('/customerLending', function () {
-//    return view('customer.customerLending');
-//});
-Route::get('/lendingCheck', function () {
-    return view('customer.lendingCheck');
-});
-Route::get('/ecommerceHome', function () {
-    return view('customer.ecommerceForCustomer');
-});
-
-Route::resource('productCategory','SuperAdmin\CategoryController');
+//automobile workshop section
+Route::resource('automobileWorkshop','Admin\AutoMobileWorkshopController');
+Route::resource('automobileEngineer','Admin\AutomobileEngineerController');

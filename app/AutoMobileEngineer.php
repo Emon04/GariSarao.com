@@ -36,4 +36,8 @@ class AutoMobileEngineer extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function workshop(){
+        return $this->belongsTo(AutomobileWorkShop::class,'automobile_work_shop_id');
+    }
 }
