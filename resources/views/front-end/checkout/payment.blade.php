@@ -1,13 +1,13 @@
 @extends('front-end.master')
-
-
 @section('body')
-    <div class="container">
+    @section('content')
+        <div class="col-lg-9 category-home-banner">
+            <div class="container">
         <div class="row">
             <div class="col-lg-12">
-               <h3 class="text-center">
+               <h5 class="text-center">
                    Dear,  <strong class="text-success">{{Session::get('customerName')}}</strong> You have to give us product payment method...
-               </h3>
+               </h5>
             </div>
         </div>
         <div class="row">
@@ -39,4 +39,6 @@
             </div>
         </div>
     </div>
+        </div>
+    @endsection
 @endsection

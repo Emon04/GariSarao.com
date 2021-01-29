@@ -1,17 +1,17 @@
 @extends('front-end.master')
 
 @section('body')
-    <div class="container">
+@section('content')
+    <div class=" col-lg-9 category-home-banner">
         <div class="row">
             <div class="col-lg-12">
-                <div class="card-header mt-5">
-                    <h1 class="text-center">
-                        You have to login to complete your valuable order.If you are not register please register
-                    </h1>
+                <div class="card-header">
+                    <h5 class="text-center">
+                       Please login or register to finialize order.
+                    </h5>
                 </div>
-            </div>>
+            </div>
         </div>
-    </div>>
     <div class="container">
         <div class="row">
             <div class="col-lg-7">
@@ -81,4 +81,6 @@
             </div>
         </div>
     </div>
+    </div>
+@endsection
  @endsection

@@ -6,7 +6,7 @@
                 <div class="col-lg-7">
                     <div class="float-left">
                         <p>Phone: +01 734655485</p>
-                        <p>email: eisershop@gmail.com</p>
+                        <p>email: info.garisarao@gmail.com</p>
                     </div>
                 </div>
                 <div class="col-lg-5">
@@ -25,7 +25,7 @@
                             @else
                             <li><a href="{{route('new-customer-login')}}">Login</a></li>
                             @endif
-                            <li><a href="#">Create Account</a></li>
+{{--                            <li><a href="#">Create Account</a></li>--}}
                         </ul>
                     </div>
                 </div>
@@ -70,7 +70,7 @@
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="#" class="icons">
+                                    <a href="{{ route('view-cart') }}" class="icons">
                                         <i class="ti-shopping-cart"></i>
                                     </a>
                                 </li>
@@ -78,14 +78,10 @@
                                 <li class="nav-item">
                                     <a href="#" class="icons">
                                         <i class="ti-user" aria-hidden="true"></i>
+                                        @if(Session::get('customerId')){{ Session::get('customerName') }}@endif
                                     </a>
                                 </li>
 
-                                <li class="nav-item">
-                                    <a href="#" class="icons">
-                                        <i class="ti-heart" aria-hidden="true"></i>
-                                    </a>
-                                </li>
                             </ul>
                         </div>
                     </div>

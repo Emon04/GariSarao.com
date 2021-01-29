@@ -3,15 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="7ce5acff-8ac8-4d4f-8ab9-991dff004e4e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/GariSaraoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/GariSaraoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CartController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CheckoutController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CheckoutController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/front/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/front/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/front/img/banner/banner-bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/front/img/banner/banner-bg.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/home/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/home/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front-end/cart/cart.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front-end/cart/cart.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front-end/checkout/checkout-register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front-end/checkout/checkout-register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front-end/checkout/checkout-shipping.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front-end/checkout/checkout-shipping.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front-end/checkout/confirm-payment.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front-end/checkout/confirm-payment.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front-end/checkout/payment.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front-end/checkout/payment.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front-end/customer/customer-login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front-end/customer/customer-login.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/front-end/home/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front-end/home/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/front-end/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front-end/includes/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front-end/includes/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front-end/includes/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front-end/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front-end/master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front-end/product/product-details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front-end/product/product-details.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,7 +170,7 @@
       <option name="presentableId" value="Default" />
       <updated>1611899059400</updated>
       <workItem from="1611899060837" duration="1148000" />
-      <workItem from="1611909247793" duration="10448000" />
+      <workItem from="1611909247793" duration="15604000" />
     </task>
     <servers />
   </component>

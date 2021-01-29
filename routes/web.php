@@ -11,7 +11,7 @@ Route::get('/category/{id}/{name}','GariSaraoController@category')->name('catego
 Route::get('/product-details/{id}','GariSaraoController@productDetails')->name('product-details');
 
 Route::post('/cart','CartController@addCart')->name('add-cart');
-Route::get('/cart','CartController@viewCart');
+Route::get('/cart','CartController@viewCart')->name('view-cart');
 Route::get('/cart/delete/{id}','CartController@deleteCart')->name('delete-cart');
 Route::post('/cart/update','CartController@updateCart')->name('edit-cart');
 

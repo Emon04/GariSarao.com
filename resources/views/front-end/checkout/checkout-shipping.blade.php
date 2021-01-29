@@ -2,7 +2,8 @@
 
 
 @section('body')
-
+@section('content')
+    <div class="col-lg-9 category-home-banner">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 offset-2">
@@ -43,4 +44,5 @@
         </div>
     </div>
     </div>
+@endsection
 @endsection

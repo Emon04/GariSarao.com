@@ -67,7 +67,9 @@ class CheckoutController extends Controller
 
     public function newCustomerLogin(){
         return view('front-end.customer.customer-login');
+//        return view('front-end.checkout.checkout-register');
     }
+
     public  function shipping(){
         $customer = Customer::find(Session::get('customerId'));
         return view('front-end.checkout.checkout-shipping',[

@@ -19,11 +19,10 @@ class CartController extends Controller
             'weight' => 0
 
         ]);
-        return redirect('/cart');
+        return redirect()->back();
     }
     public function viewCart(){
         $cartProducts = Cart::content();
-
         return view('front-end.cart.cart',[
             'cartProducts' => $cartProducts
         ]);

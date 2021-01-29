@@ -60,7 +60,7 @@ Home
                             </a>
                             <div class="mt-3">
                                 <span class="mr-4">TK.{{$featuredProduct->product_price}}</span>
-                                <del>$35.00</del>
+{{--                                <del>$35.00</del>--}}
                             </div>
                         </div>
                     </div>
@@ -90,10 +90,10 @@ Home
                         <h5 class="text-uppercase">Latest Collection</h5>
                         <h3 class="text-uppercase">{{$newProducts[0]->product_name}}</h3>
                         <div class="product-img">
-                            <img class="img-fluid" src="{{asset($newProducts[0]->main_image)}}" alt="" />
+                            <a href="{{route('product-details',['id'=>$newProducts[0]->id])}}"> <img class="img-fluid" src="{{asset($newProducts[0]->main_image)}}" alt="" /></a>
                         </div>
                         <h4>{{ $newProducts[0]->product_price }}</h4>
-                        <a href="#" class="main_btn">Add to cart</a>
+                        <a href="{{route('product-details',['id'=>$newProducts[0]->id])}}" class="main_btn">View More</a>
                     </div>
                 </div>
 
@@ -103,16 +103,23 @@ Home
                         <div class="col-lg-6 col-md-6">
                             <div class="single-product">
                                 <div class="product-img">
-                                    <img class="img-fluid w-100" src="{{asset($newProduct->main_image)}}" alt=" "/>
+                                    <a href="{{route('product-details',['id'=>$newProduct->id])}}"><img class="img-fluid w-100" src="{{asset($newProduct->main_image)}}" alt=" "/></a>
                                     <div class="p_icon">
-                                        <a href="#">
+                                        <a href="{{route('product-details',['id'=>$newProduct->id])}}">
                                             <i class="ti-eye"></i>
                                         </a>
                                         <a href="#">
                                             <i class="ti-heart"></i>
                                         </a>
                                         <a href="#">
-                                            <i class="ti-shopping-cart"></i>
+                                            <form action="{{route('add-cart')}}" method="post">
+                                                @csrf
+                                                <input type="hidden" name="qty" id="sst" min="1" value="1" class="input-text qty"/>
+                                                <input type="hidden" name="id" value="{{$newProduct->id}}" />
+                                                {{--                                        <input type="submit" class="ti-shopping-cart" value="">--}}
+                                                <button type="submit" class="btn  px-2"><i class="ti-shopping-cart" aria-hidden="true"></i></button>
+                                                {{--                                        <button type="submit" name="btn" ><i class="ti-shopping-cart"></i></button>--}}
+                                            </form>
                                         </a>
                                     </div>
                                 </div>
@@ -122,7 +129,7 @@ Home
                                     </a>
                                     <div class="mt-3">
                                         <span class="mr-4">TK.{{$newProduct->product_price}}</span>
-                                        <del>$35.00</del>
+{{--                                        <del>$35.00</del>--}}
                                     </div>
                                 </div>
                             </div>
