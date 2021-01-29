@@ -26,12 +26,17 @@ Route::get('/checkout/new-customer-login','CheckoutController@newCustomerLogin')
 
 Route::get('/checkout/shipping','CheckoutController@shipping');
 Route::post('/checkout/shipping','CheckoutController@saveShippingInfo')->name('new-shipping');
-Route::get('/checkout/payment','CheckoutController@paymentForm');
+Route::get('/checkout/payment','CheckoutController@paymentForm')->name('checkout-payment');
 Route::post('/checkout/order','CheckoutController@newOrder')->name('new-order');
 Route::get('/checkout/payment/confirm','CheckoutController@confirmPayment');
 
 Route::get('/checkout/payment/stripe', 'CheckoutController@stripe');
 Route::post('/stripe', 'CheckoutController@stripePost')->name('stripe.post');
+
+//ssl commerze routes---
+Route::post('/success', 'CheckoutController@success');
+Route::post('/fail', 'CheckoutController@fail');
+Route::post('/cancel',  'CheckoutController@cancel');
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
@@ -80,3 +85,5 @@ Route::get('/order/download-order-invoice/{id}','OrderController@downloadOrderIn
 //automobile workshop section
 Route::resource('automobileWorkshop','Admin\AutoMobileWorkshopController');
 Route::resource('automobileEngineer','Admin\AutomobileEngineerController');
+
+

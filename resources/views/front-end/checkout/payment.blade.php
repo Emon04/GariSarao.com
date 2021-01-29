@@ -22,19 +22,11 @@
                                 <table class="table">
                                     <tr>
                                         <th>Cash on Delivery</th>
-                                        <td><input type="radio" name="payment_type" value="Cash">Cash on Delivery</td>
+                                        <td><input checked type="radio" name="payment_type" value="Cash">Cash on Delivery</td>
                                     </tr>
                                     <tr>
-                                        <th>Paypal/Stripe</th>
-                                        <td><input type="radio" name="payment_type" value="Stripe">Stripe</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Bkash</th>
-                                        <td><input type="radio" name="payment_type" value="Bkash">Bkash</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Rocket</th>
-                                        <td><input type="radio" name="payment_type" value="Rocket">Rocket</td>
+                                        <th>Pay Now online (Bkash, Rocket, Internet Banking or Visa card)</th>
+                                        <td><input type="radio" name="payment_type" value="Online">Pay Now</td>
                                     </tr>
                                 </table>
                             <hr>
