@@ -87,3 +87,6 @@ Route::resource('automobileWorkshop','Admin\AutoMobileWorkshopController');
 Route::resource('automobileEngineer','Admin\AutomobileEngineerController');
 
 
+
+
+Addchat::routes();

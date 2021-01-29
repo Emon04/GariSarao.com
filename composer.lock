@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3c15574efac44a47a0b6ed94ba3435c4",
+    "content-hash": "f3300f11810db4724a2ef217031c8a63",
     "packages": [
         {
             "name": "barryvdh/laravel-dompdf",
@@ -134,6 +134,57 @@
                 "shoppingcart"
             ],
             "time": "2020-12-27T20:13:34+00:00"
+        },
+        {
+            "name": "classiebit/addchat-laravel",
+            "version": "1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/classiebit/addchat-laravel.git",
+                "reference": "0a60102b865dc2443ee305fc99c327e6a527aa14"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/classiebit/addchat-laravel/zipball/0a60102b865dc2443ee305fc99c327e6a527aa14",
+                "reference": "0a60102b865dc2443ee305fc99c327e6a527aa14",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Classiebit\\Addchat\\AddchatServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Classiebit\\Addchat\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Classiebit",
+                    "email": "info@classiebit.com"
+                }
+            ],
+            "description": "Live chat widget for Laravel that also includes multi-user chat, group permissions, customer support chat & more.",
+            "homepage": "https://classiebit.com/addchat-laravel",
+            "keywords": [
+                "laravel",
+                "laravel chat package",
+                "laravel-package",
+                "vuejs"
+            ],
+            "support": {
+                "issues": "https://github.com/classiebit/addchat-laravel/issues",
+                "source": "https://github.com/classiebit/addchat-laravel"
+            },
+            "time": "2020-12-15T07:32:17+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -6721,5 +6772,5 @@
         "php": "^7.2"
     },
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.0.0"
 }

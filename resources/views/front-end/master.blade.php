@@ -21,9 +21,15 @@
     <!-- main css -->
     <link rel="stylesheet" href="{{asset('/front')}}/css/style.css" />
     <link rel="stylesheet" href="{{asset('/front')}}/css/responsive.css" />
+    <link href="<?php echo asset('assets/addchat/css/addchat.min.css') ?>" rel="stylesheet">
 </head>
 
 <body>
+<div id="addchat_app"
+     data-baseurl="<?php echo url('') ?>"
+     data-csrfname="<?php echo 'X-CSRF-Token' ?>"
+     data-csrftoken="<?php echo csrf_token() ?>"
+></div>
 <!--================Header Menu Area =================-->
 @include('front-end.includes.header')
 <!--================Header Menu Area =================-->
@@ -50,6 +56,9 @@
 <script src="{{asset('/front')}}/vendors/counter-up/jquery.counterup.js"></script>
 <script src="{{asset('/front')}}/js/mail-script.js"></script>
 <script src="{{asset('/front')}}/js/theme.js"></script>
+<script type="module" src="<?php echo asset('assets/addchat/js/addchat.min.js') ?>"></script>
+<!-- Fallback support for Older browsers -->
+<script nomodule src="<?php echo asset('assets/addchat/js/addchat-legacy.min.js') ?>"></script>
 </body>
 
 </html>
