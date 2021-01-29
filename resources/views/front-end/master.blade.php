@@ -24,7 +24,7 @@
     <link href="<?php echo asset('assets/addchat/css/addchat.min.css') ?>" rel="stylesheet">
 </head>
 
-<body>
+<body style="background-color: #e6d7be">
 <div id="addchat_app"
      data-baseurl="<?php echo url('') ?>"
      data-csrfname="<?php echo 'X-CSRF-Token' ?>"

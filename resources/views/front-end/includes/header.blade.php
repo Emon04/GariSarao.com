@@ -32,8 +32,8 @@
             </div>
         </div>
     </div>
-    <div class="main_menu">
-        <div class="container">
+    <div class="main_menu" style="background-color: #ead3b1">
+        <div class="container" >
             <nav class="navbar navbar-expand-lg navbar-light w-100">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <a class="navbar-brand logo_h" href="index.html">

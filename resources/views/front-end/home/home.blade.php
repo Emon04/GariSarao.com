@@ -5,81 +5,25 @@ Home
 @endsection
 
 @section('body')
-    <!--================Home Banner Area =================-->
-
-{{--    <section class="home_banner_area mb-40">--}}
-{{--        <div class="banner_inner d-flex align-items-center">--}}
-{{--            <div class="container">--}}
-{{--                <div class="banner_content row">--}}
-{{--                    <div class="col-lg-3">--}}
-{{--                        <div class="left_sidebar_area">--}}
-{{--                            <aside class="left_widgets p_filter_widgets">--}}
-{{--                                <div class="l_w_title">--}}
-{{--                                    <h1><span>Categories</span></h1>--}}
-{{--                                </div>--}}
-{{--                                <div class="widgets_inner">--}}
-{{--                                    <ul class="list">--}}
-{{--                                        @foreach($categories as $category)--}}
-{{--                                            <li class="nav-item">--}}
-{{--                                                <a class="nav-link" href="{{route('category', ['id'=>$category->id , 'name'=>$category->cat_name])}}">{{$category->cat_name}}</a>--}}
-{{--                                            </li>--}}
-{{--                                        @endforeach--}}
-{{--                                        <li>--}}
-{{--                                            <a href="#">Frozen Fish</a>--}}
-{{--                                        </li>--}}
-{{--                                        <li>--}}
-{{--                                            <a href="#">Dried Fish</a>--}}
-{{--                                        </li>--}}
-{{--                                        <li>--}}
-{{--                                            <a href="#">Fresh Fish</a>--}}
-{{--                                        </li>--}}
-{{--                                        <li>--}}
-{{--                                            <a href="#">Meat Alternatives</a>--}}
-{{--                                        </li>--}}
-{{--                                        <li>--}}
-{{--                                            <a href="#">Fresh Fish</a>--}}
-{{--                                        </li>--}}
-{{--                                        <li>--}}
-{{--                                            <a href="#">Meat Alternatives</a>--}}
-{{--                                        </li>--}}
-{{--                                        <li>--}}
-{{--                                            <a href="#">Meat</a>--}}
-{{--                                        </li>--}}
-{{--                                    </ul>--}}
-{{--                                </div>--}}
-{{--                            </aside>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                    <div class="col-lg-9 left-home-banner">--}}
-{{--                        <p class="sub text-uppercase">Welcome to</p>--}}
-{{--                        <h3><span>Garisarao's</span> Motor <br />Parts <span>Shop</span></h3>--}}
-{{--                        <h4>Biggest Online Motor Parts Shop on Bangladesh </h4>--}}
-{{--                        <a class="main_btn mt-40" href="#">View Collection</a>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </section>--}}
-    <!--================End Home Banner Area =================-->
 
     <!-- Start feature Area -->
     @section('content')
         <div class="col-lg-9 left-home-banner">
             <p class="sub text-uppercase">Welcome to</p>
             <h3><span>Garisarao's</span> Motor <br />Parts <span>Shop</span></h3>
-            <h4>Biggest Online Motor Parts Shop on Bangladesh </h4>
-            <a class="main_btn mt-40" href="#">View Collection</a>
+            <h4>Biggest Online Motor Parts Shop of Bangladesh </h4>
+{{--            <a class="main_btn mt-40" href="#">View Collection</a>--}}
         </div>
     @endsection
 
     <!--================ Feature Product Area =================-->
-    <section class="feature_product_area section_gap_bottom_custom">
+    <section class="feature_product_area section_gap_bottom_custom" style="background-color: #e6d7be">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-12">
                     <div class="main_title">
                         <h2><span>Featured product</span></h2>
-                        <p>Bring called seed first of third give itself now ment</p>
+                        <p>Bring all latest branded motor spare parts!</p>
                     </div>
                 </div>
             </div>
@@ -89,16 +33,24 @@ Home
                 <div class="col-lg-4 col-md-6">
                     <div class="single-product">
                         <div class="product-img">
-                            <img class="img-fluid w-100" src="{{asset($featuredProduct->main_image)}}" alt=" " />
+                            <a href="{{route('product-details',['id'=>$featuredProduct->id])}}"><img class="img-fluid w-100" src="{{asset($featuredProduct->main_image)}}" alt=" " /></a>
                             <div class="p_icon">
-                                <a href="#">
+                                <a href="{{route('product-details',['id'=>$featuredProduct->id])}}">
                                     <i class="ti-eye"></i>
                                 </a>
                                 <a href="#">
                                     <i class="ti-heart"></i>
                                 </a>
                                 <a href="#">
-                                    <i class="ti-shopping-cart"></i>
+{{--                                    <i class="ti-shopping-cart"></i>--}}
+                                    <form action="{{route('add-cart')}}" method="post">
+                                        @csrf
+                                        <input type="hidden" name="qty" id="sst" min="1" value="1" class="input-text qty"/>
+                                        <input type="hidden" name="id" value="{{$featuredProduct->id}}" />
+{{--                                        <input type="submit" class="ti-shopping-cart" value="">--}}
+                                        <button type="submit" class="btn  px-2"><i class="ti-shopping-cart" aria-hidden="true"></i></button>
+{{--                                        <button type="submit" name="btn" ><i class="ti-shopping-cart"></i></button>--}}
+                                    </form>
                                 </a>
                             </div>
                         </div>

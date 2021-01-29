@@ -2,6 +2,7 @@
 
 
 namespace App\Http\Controllers;
+use App\Brand;
 use App\Category;
 use App\Product;
 use Illuminate\Http\Request;
@@ -29,8 +30,13 @@ class GariSaraoController extends Controller
         }
         public function productDetails($id){
              $productDetails = Product::find($id);
+             $cat = Category::find($productDetails->cat_id);
+             $brand = Brand::find($productDetails->brand_id);
+//             dd($brand);
             return view('front-end.product.product-details',[
                 'productDetails'  => $productDetails,
+                'category'  => $cat,
+                'brand'  => $brand,
             ]);
         }
 }
