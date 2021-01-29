@@ -690,6 +690,10 @@
                     </div>
                 </div>
             </div>
+
+            <div>
+                @comments(['model' => $productDetails])
+            </div>
         </div>
     </section>
     <!--================End Product Description Area =================-->
