@@ -39,4 +39,10 @@ class AutomobileWorkShop extends Authenticatable
     public function engineers(){
         return $this->hasMany(AutoMobileEngineer::class,'automobile_work_shop_id');
     }
+    public function servicePrices(){
+        return $this->hasMany(ServicePrice::class,'automobile_work_shop_id');
+    }
+    public function services(){
+        return $this->hasMany(AutomobileService::class,'automobile_work_shop_id');
+    }
 }

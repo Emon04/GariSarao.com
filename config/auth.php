@@ -40,21 +40,18 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
-        'admin' => [
-            'driver' => 'session',
-            'provider' => 'admins',
+
+        'customer'=>[
+            'driver'=>'session',
+            'provider'=>'customers',
         ],
-                'customer'=>[
-                    'driver'=>'session',
-                    'provider'=>'customers',
-                ],
         'autoMobileEngineer'=>[
             'driver'=>'session',
             'provider'=>'autoMobileEngineers',
         ],
-        'superAdmin'=>[
+        'autoMobileWorkshop'=>[
             'driver'=>'session',
-            'provider'=>'superAdmins',
+            'provider'=>'autoMobileWorkshops',
         ],
         'api' => [
             'driver' => 'token',
@@ -85,10 +82,6 @@ return [
             'driver' => 'eloquent',
             'model' => App\User::class,
         ],
-        'admins' => [
-            'driver' => 'eloquent',
-            'model' => App\SuperAdmin::class,
-        ],
         'customers' => [
             'driver' => 'eloquent',
             'model' => App\Customer::class,
@@ -97,9 +90,9 @@ return [
             'driver' => 'eloquent',
             'model' => App\AutoMobileEngineer::class,
         ],
-        'superAdmins' => [
+        'autoMobileWorkshops' => [
             'driver' => 'eloquent',
-            'model' => App\SuperAdmin::class,
+            'model' => App\AutomobileWorkShop::class,
         ],
 
         // 'users' => [
@@ -130,26 +123,20 @@ return [
             'expire' => 60,
             'throttle' => 60,
         ],
-        'admins' => [
-            'provider' => 'admins',
-            'table' => 'password_resets',
-            'expire' => 60,
-            'throttle' => 60,
-        ],
         'customers' => [
-            'provider' => 'admins',
+            'provider' => 'customers',
             'table' => 'password_resets',
             'expire' => 60,
             'throttle' => 60,
         ],
         'autoMobileEngineers' => [
-            'provider' => 'admins',
+            'provider' => 'autoMobileEngineers',
             'table' => 'password_resets',
             'expire' => 60,
             'throttle' => 60,
         ],
-        'autoMobileEngineers' => [
-            'provider' => 'superAdmins',
+        'autoMobileWorkshops' => [
+            'provider' => 'autoMobileWorkshops',
             'table' => 'password_resets',
             'expire' => 60,
             'throttle' => 60,

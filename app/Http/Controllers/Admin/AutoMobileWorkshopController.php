@@ -49,7 +49,7 @@ class AutoMobileWorkshopController extends Controller
             'trade_license'  => 'required',
             'password'  => 'required',
             'image' => 'required|image',
-            'status'      => 'required',
+//            'status'      => 'required',
         ]);
 
         $image = $request->file('image');

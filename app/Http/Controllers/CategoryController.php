@@ -63,12 +63,12 @@ class CategoryController extends Controller
       $category->status   = $request->status;
       $category->save();
 
-      return redirect('/category/manage')->with('message','Category Update Successfully');
+      return redirect()->back()->with('message','Category Update Successfully');
     }
     public function deleteCategory($id){
       $category = Category::find($id);
       $category->delete();
 
-      return redirect('/category/manage')->with('message','Category Deleted Successfully');
+      return redirect()->back()->with('message','Category Deleted Successfully');
     }
 }

@@ -64,9 +64,13 @@
                         <div class="col-lg-5 pr-0">
                             <ul class="nav navbar-nav navbar-right right_nav pull-right">
                                 <li class="nav-item">
-                                    <a href="#" class="icons">
-                                        <i class="ti-search" aria-hidden="true"></i>
-                                    </a>
+                                    <form method="GET" action="{{route('search')}}">
+                                        <br>
+                                            <button class="ti-search" type="submit">
+                                            </button>
+                                            <input class="" name="query" type="text" placeholder="">
+
+                                    </form>
                                 </li>
 
                                 <li class="nav-item">

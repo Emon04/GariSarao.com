@@ -64,7 +64,7 @@
                                         </div>
                                     </td>
                                     <td>
-                                        <h5> {{$cartProduct->price}}</h5>
+                                        <h5>TK. {{$cartProduct->price}}</h5>
                                     </td>
                                     <td>
                                         <form  action="{{route('edit-cart')}}" method="post">
@@ -91,7 +91,7 @@
                                     </td>
                                     <td></td>
                                 </tr>
-                                {{$sum = $sum+$cartProduct->subtotal}}
+
                             @endforeach
                             <tr>
                                 <td></td>
@@ -99,7 +99,7 @@
                                     <h5>Subtotal</h5>
                                 </td>
                                 <td>
-                                    <h5>TK. {{$sum}}</h5>
+                                    <h5>TK. {{$sum = $sum+$cartProduct->subtotal}}</h5>
                                     <?php Session::put('orderTotal', $sum) ?>
 
                                 </td>

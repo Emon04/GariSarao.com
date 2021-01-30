@@ -65,8 +65,8 @@ class Handler extends ExceptionHandler
             case 'customer';
                 $login='customer/login';
                 break;
-            case 'autoMobileEngineer';
-                $login='autoMobileEngineer/login';
+            case 'autoMobileWorkshop';
+                $login='autoMobileWorkshop/login';
                 break;
             default:
                 $login='login';

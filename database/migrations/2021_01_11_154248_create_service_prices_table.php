@@ -17,6 +17,8 @@ class CreateServicePricesTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('automobile_service_id');
             $table->double('price');
+            $table->string('status');
+            $table->text('description');
             $table->foreign('automobile_service_id')->references('id')->on('automobile_services')->onUpdate('CASCADE')->onDelete('CASCADE');
             $table->unsignedBigInteger('automobile_work_shop_id');
             $table->foreign('automobile_work_shop_id')->references('id')->on('automobile_work_shops')->onUpdate('CASCADE')->onDelete('CASCADE');
