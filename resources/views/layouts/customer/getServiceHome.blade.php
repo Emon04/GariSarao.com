@@ -52,38 +52,7 @@
 <!-- start banner Area -->
 
 <!-- End home-about Area -->
-    <section class="banner-area relative" id="home">
-        <div class="overlay overlay-bg"></div>
-        <div class="container">
-            <div class="row fullscreen d-flex align-items-center justify-content-between">
-                <div class="banner-content col-lg-6 col-md-6 ">
-                    <h6 class="text-white ">GariSarao.Com</h6>
-                    <h1 class="text-uppercase">
-                        Need a service? just request your service
-                    </h1>
-                    <p class="pt-10 pb-10 text-white">
 
-                    </p>
-                    <a href="{{ route('getService.allService') }}" class="primary-btn text-uppercase">Services</a>
-                </div>
-                <div class="col-lg-4  col-md-6 header-right">
-                    <h4 class="pb-30">Search Your Desired Service!</h4>
-                    <form method="get" action="{{ route('getService.searchService') }}" class="form">
-                        <div class="from-group">
-                            <input required class="form-control txt-field" type="text" name="service" placeholder="Body Repair "  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Body Repair'">
-                            <input required class="form-control txt-field" type="text" name="area" placeholder="Your location. eg. dhanmondi" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your location. eg. dhanmondi'">
-                        </div>
-
-                        <div class="form-group">
-
-                            <button type="submit" class="btn btn-default btn-lg btn-block text-center text-uppercase">Search service</button>
-
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
     <!-- End banner Area -->
 
     <!-- Start home-about Area -->

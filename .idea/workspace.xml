@@ -26,10 +26,9 @@
   <component name="ChangeListManager">
     <list default="true" id="7ce5acff-8ac8-4d4f-8ab9-991dff004e4e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/workshop/AutomobileServicePriceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/workshop/AutomobileServicePriceController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/RequestBook.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/RequestBook.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/autoMobileWorkshop/includes/sideber.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/autoMobileWorkshop/includes/sideber.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CheckoutController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CheckoutController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/workshop/AutomobileServiceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/workshop/AutomobileServiceController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/customer/getServiceHome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/customer/getServiceHome.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +165,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/autoMobileWorkshop" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -196,7 +195,9 @@
       <workItem from="1611899060837" duration="1148000" />
       <workItem from="1611909247793" duration="27848000" />
       <workItem from="1611940688321" duration="6490000" />
-      <workItem from="1611969965571" duration="19263000" />
+      <workItem from="1611969965571" duration="19418000" />
+      <workItem from="1611990362545" duration="34000" />
+      <workItem from="1611990401481" duration="1477000" />
     </task>
     <servers />
   </component>
@@ -214,24 +215,6 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="71" y="142" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1611988192051">
-      <screen x="0" y="0" width="1366" height="768" />
-    </state>
-    <state x="71" y="142" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.768@0.0.1366.768" timestamp="1611988192051" />
-    <state x="463" y="138" key="FileChooserDialogImpl" timestamp="1611941885814">
-      <screen x="0" y="0" width="1366" height="768" />
-    </state>
-    <state x="463" y="138" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1611941885814" />
-    <state x="758" y="208" width="331" height="152" key="NewPhpFileDialog" timestamp="1611987286413">
-      <screen x="0" y="0" width="1366" height="768" />
-    </state>
-    <state x="758" y="208" width="331" height="152" key="NewPhpFileDialog/0.0.1366.768@0.0.1366.768" timestamp="1611987286413" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1611936989438">
-      <screen x="0" y="0" width="1366" height="768" />
-    </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1611936989438" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

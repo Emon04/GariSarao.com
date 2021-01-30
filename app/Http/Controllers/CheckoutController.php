@@ -48,15 +48,20 @@ class CheckoutController extends Controller
     public function customerLoginCheck(Request $request){
         $customer = Customer::where('email_address' ,$request->email_address)->first();
 
-        if(password_verify($request->password , $customer->password)){
-            Session::put('customerId',$customer->id);
-            Session::put('customerName',$customer->first_name.' '.$customer->last_name);
+        if ($customer !=null){
+            if(password_verify($request->password , $customer->password)){
+                Session::put('customerId',$customer->id);
+                Session::put('customerName',$customer->first_name.' '.$customer->last_name);
 
-            return redirect('/checkout/shipping');
+                return redirect('/checkout/shipping');
+            }
+            else{
+                return redirect('/checkout')->with('message', 'invalid password');
+            }
+        }else{
+            return redirect('/checkout')->with('message', 'Invalid email');
         }
-        else{
-            return redirect('/checkout')->with('message', 'invalid password');
-        }
+
     }
     public function customerLogout(){
 

@@ -45,12 +45,13 @@ class AutomobileServiceController extends Controller
             'image' => 'required|image',
             'status'      => 'required',
         ]);
-
+        $usr = auth()->user();
         $image = $request->file('image');
         $ext = $image->getClientOriginalExtension();
-        $imageName = $request->name;
+        $imageName = $request->service_name;
         $directory = 'admin/service-images/';
-        $imageUrl  = $directory.$usr = auth()->user()->name.$imageName.'.'.$ext;
+        $imageUrl  = $directory.$usr->name.$imageName.'.'.$ext;
+
         Image::make($image)->resize(400,400)->save($imageUrl);
 //        $brandImage->move($directory, $imageName.'.'.$ext);
         $automobileService = new AutomobileService();
@@ -101,14 +102,15 @@ class AutomobileServiceController extends Controller
             'status'      => 'required',
         ]);
 
+        $usr = auth()->user();
         $automobileService = AutomobileService::findOrFail($id);
         if ($request->hasFile('image')){
             unlink($automobileService->image);
             $image = $request->file('image');
             $ext = $image->getClientOriginalExtension();
-            $imageName = $request->name;
+            $imageName = $request->service_name;
             $directory = 'admin/service-images/';
-            $imageUrl  = $directory.$usr = auth()->user()->name.$imageName.'.'.$ext;
+            $imageUrl  = $directory.$usr->name.$imageName.'.'.$ext;
             Image::make($image)->resize(400,400)->save($imageUrl);
             $automobileService->image = $imageUrl;
         }
