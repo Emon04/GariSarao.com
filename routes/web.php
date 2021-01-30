@@ -93,6 +93,7 @@ Route::middleware('auth:autoMobileWorkshop')->prefix('autoMobileWorkshop')->grou
     Route::get('/automobileServicePrice/edit/{id}', 'workshop\AutomobileServicePriceController@edit')->name('autoMobileWorkshop.automobileServicePrice.edit');
     Route::put('/automobileServicePrice/update/{id}', 'workshop\AutomobileServicePriceController@update')->name('autoMobileWorkshop.automobileServicePrice.update');
     Route::delete('/automobileServicePrice/delete/{id}', 'workshop\AutomobileServicePriceController@destroy')->name('autoMobileWorkshop.automobileServicePrice.delete');
+    Route::get('/service/requests', 'workshop\AutomobileServicePriceController@requests')->name('autoMobileWorkshop.service.requests');
 
 });
     Route::get('/home', 'HomeController@index')->name('home');

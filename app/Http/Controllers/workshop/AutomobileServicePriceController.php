@@ -5,6 +5,7 @@ namespace App\Http\Controllers\workshop;
 use App\AutoMobileEngineer;
 use App\AutomobileService;
 use App\Http\Controllers\Controller;
+use App\RequestBook;
 use App\ServicePrice;
 use Illuminate\Http\Request;
 
@@ -125,5 +126,12 @@ class AutomobileServicePriceController extends Controller
         $automobileServicePricePrice = ServicePrice::findOrFail($id);
         $automobileServicePricePrice->delete();
         return redirect()->route('autoMobileWorkshop.automobileServicePrice.list')->with('message','Automobile Service information successfully deleted.');
+    }
+
+    public function requests(){
+        $u = auth()->user()->id;
+            $requests = RequestBook::with(['service', 'workshop'])->where('workshop_id','=',$u)->get();
+//            dd($requests);
+            return view('autoMobileWorkshop.requestslist',compact('requests'));
     }
 }
