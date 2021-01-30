@@ -26,9 +26,9 @@
   <component name="ChangeListManager">
     <list default="true" id="7ce5acff-8ac8-4d4f-8ab9-991dff004e4e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CheckoutController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CheckoutController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/workshop/AutomobileServiceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/workshop/AutomobileServiceController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/customer/getServiceHome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/customer/getServiceHome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CartController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front-end/cart/cart.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front-end/cart/cart.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,7 +197,8 @@
       <workItem from="1611940688321" duration="6490000" />
       <workItem from="1611969965571" duration="19418000" />
       <workItem from="1611990362545" duration="34000" />
-      <workItem from="1611990401481" duration="1477000" />
+      <workItem from="1611990401481" duration="6806000" />
+      <workItem from="1612009139680" duration="2162000" />
     </task>
     <servers />
   </component>
@@ -215,16 +216,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/Http/Controllers/workshop/AutomobileServiceController.php</url>
-          <line>15</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

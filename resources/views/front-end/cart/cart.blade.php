@@ -31,6 +31,7 @@
 {{--                </div>--}}
 {{--            </div>--}}
 {{--        </div>--}}
+        @if($cartProducts->isNotEmpty())
         <section class="cart_area col-lg-12 ">
             <div class="container">
                 <div class="cart_inner">
@@ -70,15 +71,15 @@
                                         <form  action="{{route('edit-cart')}}" method="post">
                                             @csrf
                                             <div class="product_count">
-                                                <input type="text" name="qty" id="sst" min="1" value="{{$cartProduct->qty}}" class="input-text qty"/>
+                                                <input type="number" name="qty"  min="1" value="{{$cartProduct->qty}}" class=""/>
                                                 <input type="hidden" name="rowId"  value="{{$cartProduct->rowId}}" />
-                                                <button
-                                                    onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;" class="increase items-count" type="button">
-                                                    <i class="lnr lnr-chevron-up"></i>
-                                                </button>
-                                                <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;" class="reduced items-count" type="button">
-                                                    <i class="lnr lnr-chevron-down"></i>
-                                                </button>
+{{--                                                <button--}}
+{{--                                                    onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;" class="increase items-count" type="button">--}}
+{{--                                                    <i class="lnr lnr-chevron-up"></i>--}}
+{{--                                                </button>--}}
+{{--                                                <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;" class="reduced items-count" type="button">--}}
+{{--                                                    <i class="lnr lnr-chevron-down"></i>--}}
+{{--                                                </button>--}}
                                             </div>
                                             <button type="submit" class="btn btn-primary"><i class="fa fa-edit"></i></button>
                                         </form>
@@ -91,7 +92,6 @@
                                     </td>
                                     <td></td>
                                 </tr>
-
                             @endforeach
                             <tr>
                                 <td></td>
@@ -99,7 +99,8 @@
                                     <h5>Subtotal</h5>
                                 </td>
                                 <td>
-                                    <h5>TK. {{$sum = $sum+$cartProduct->subtotal}}</h5>
+                                    <h5>TK. {{ $subTotalPrice }} </h5>
+
                                     <?php Session::put('orderTotal', $sum) ?>
 
                                 </td>
@@ -127,6 +128,10 @@
                 </div>
             </div>
         </section>
+        @else
+            <div class="cart_area col-lg-12 "> <p style="text-align: center; color: #0b0b0b; font-size: 25px"><strong>Your shopping cart is empty</strong></p></div>
+
+        @endif
     </section>
     </div>
     <!--================End Home Banner Area =================-->

@@ -23,8 +23,15 @@ class CartController extends Controller
     }
     public function viewCart(){
         $cartProducts = Cart::content();
+//        dd($cartProducts->isNotEmpty());
+        $subtotal=0;
+        foreach ($cartProducts as $cart){
+            $subtotal += ($cart->qty * $cart->price);
+        }
+//        dd($subtotal);
         return view('front-end.cart.cart',[
-            'cartProducts' => $cartProducts
+            'cartProducts' => $cartProducts,
+            'subTotalPrice' => $subtotal,
         ]);
     }
     public function deleteCart($id){

@@ -8,6 +8,7 @@ Route::get('/', function () {
     return view('customer.customerLending');
 });
 Route::get('/search', 'SearchController@search')->name('search');
+
 Route::get('/getServiceHome','ServiceController@getServiceHome')->name('getService.home');
 Route::get('/getServiceHome/allServices','ServiceController@allService')->name('getService.allService');
 Route::get('/getServiceHome/search/services','ServiceController@searchService')->name('getService.searchService');
@@ -53,7 +54,7 @@ Route::get('/checkout/payment/confirm','CheckoutController@confirmPayment');
 Route::get('/checkout/payment/stripe', 'CheckoutController@stripe');
 Route::post('/stripe', 'CheckoutController@stripePost')->name('stripe.post');
 
-//ssl commerze routes---
+//sslcommerz routes---
 Route::post('/success', 'CheckoutController@success');
 Route::post('/fail', 'CheckoutController@fail');
 Route::post('/cancel',  'CheckoutController@cancel');
@@ -79,14 +80,16 @@ Route::middleware('auth:autoMobileWorkshop')->prefix('autoMobileWorkshop')->grou
 //    Route::get('/automobileEngineer/list', 'workshop\AutomobileEngineerController@index')->name('autoMobileWorkshop.automobileEngineer.list');
     Route::delete('/automobileEngineer/delete/{id}', 'workshop\AutomobileEngineerController@destroy')->name('autoMobileWorkshop.automobileEngineer.delete');
     Route::get('logout', 'workshop\LoginController@logout')->name('autoMobileWorkshop.logout');
-    //auto mobile service
+
+    //automobile services
     Route::get('/automobileService/new', 'workshop\AutomobileServiceController@create')->name('autoMobileWorkshop.automobileService.new');
     Route::post('/automobileService/new', 'workshop\AutomobileServiceController@store')->name('autoMobileWorkshop.automobileService.save');
     Route::get('/automobileService/list', 'workshop\AutomobileServiceController@index')->name('autoMobileWorkshop.automobileService.list');
     Route::get('/automobileService/edit/{id}', 'workshop\AutomobileServiceController@edit')->name('autoMobileWorkshop.automobileService.edit');
     Route::put('/automobileService/update/{id}', 'workshop\AutomobileServiceController@update')->name('autoMobileWorkshop.automobileService.update');
     Route::delete('/automobileService/delete/{id}', 'workshop\AutomobileServiceController@destroy')->name('autoMobileWorkshop.automobileService.delete');
-    // auto mobile service price
+
+    // automobile service price
     Route::get('/automobileServicePrice/new', 'workshop\AutomobileServicePriceController@create')->name('autoMobileWorkshop.automobileServicePrice.new');
     Route::post('/automobileServicePrice/new', 'workshop\AutomobileServicePriceController@store')->name('autoMobileWorkshop.automobileServicePrice.save');
     Route::get('/automobileServicePrice/list', 'workshop\AutomobileServicePriceController@index')->name('autoMobileWorkshop.automobileServicePrice.list');
@@ -97,7 +100,8 @@ Route::middleware('auth:autoMobileWorkshop')->prefix('autoMobileWorkshop')->grou
 
 });
     Route::get('/home', 'HomeController@index')->name('home');
-//start category
+
+//manage category
     Route::get('/category/add', 'CategoryController@addCategory')->name('add-category');
     Route::post('/category/new','CategoryController@newCategory')->name('new-category');
     Route::get('/category/manage','CategoryController@manageCategory')->name('manage-category');
@@ -106,8 +110,8 @@ Route::middleware('auth:autoMobileWorkshop')->prefix('autoMobileWorkshop')->grou
     Route::post('/category/manage/update','CategoryController@updateCategory')->name('update-category');
     Route::get('/category/manage/delete/{id}','CategoryController@deleteCategory')->name('delete-category');
 
-//end category
-//start brand
+
+//manage brand
 
     Route::get('/brand/add','BrandController@addBrand')->name('add-brand');
     Route::post('/brand/new','BrandController@newBrand')->name('new-brand');
@@ -117,9 +121,8 @@ Route::middleware('auth:autoMobileWorkshop')->prefix('autoMobileWorkshop')->grou
     Route::post('/brand/update','BrandController@updateBrand')->name('edit-brand');
     Route::get('/brand/delete/{id}','BrandController@deleteBrand')->name('delete-brand');
 
-//end brand
 
-//Product Route Start Section
+//manage Product
 
     Route::get('/product/add','ProductController@addProduct')->name('add-product');
     Route::post('/product/new','ProductController@newProduct')->name('new-product');
@@ -127,15 +130,14 @@ Route::middleware('auth:autoMobileWorkshop')->prefix('autoMobileWorkshop')->grou
     Route::post('/product/update/{id}','ProductController@updateProduct')->name('update-product');
     Route::get('/product/delete/{id}','ProductController@deleteProduct')->name('delete-product');
 
-
-//Product Route End Section
+//manage product end section
 
     Route::get('/order/manage-order','OrderController@manageOrderInfo')->name('manage-order');
     Route::get('/order/view-order-detail/{id}','OrderController@viewOrderDetail')->name('view-order-detail');
     Route::get('/order/view-order-invoice/{id}','OrderController@viewOrderInvoice')->name('view-order-invoice');
     Route::get('/order/download-order-invoice/{id}','OrderController@downloadOrderInvoice')->name('download-order-invoice');
 
-//automobile workshop section
+//automobile workshop portion
     Route::resource('automobileWorkshop','Admin\AutoMobileWorkshopController');
     Route::resource('automobileEngineer','Admin\AutomobileEngineerController');
 
